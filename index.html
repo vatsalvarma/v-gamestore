@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>V-GameStore</title>
+
+<style>
+:root {
+    --bg: #eef2f3;
+    --text: #111;
+    --card: #ffffff;
+    --accent: #000;
+}
+
+.dark {
+    --bg: #0f0f0f;
+    --text: #ffffff;
+    --card: #1a1a1a;
+    --accent: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.toggle {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: var(--accent);
+    color: var(--bg);
+    font-size: 14px;
+}
+
+/* HERO */
+.hero {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: linear-gradient(120deg, #e3e8eb, #ffffff);
+    border-radius: 30px;
+    padding: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark .hero {
+    background: linear-gradient(120deg, #1b1b1b, #0f0f0f);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-buttons button {
+    padding: 14px 25px;
+    border-radius: 30px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.primary {
+    background: black;
+    color: white;
+}
+
+.secondary {
+    background: white;
+    color: black;
+}
+
+.hero img {
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+    height: 350px;
+}
+
+/* GAMES */
+.section {
+    padding: 60px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.game-card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+}
+
+.game-card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.game-card h3 {
+    margin: 10px 0 5px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">V-GAMESTORE</div>
+    <div class="nav-links">
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search games...">
+        </div>
+        <div class="toggle" onclick="toggleMode()">🌙</div>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>LEVEL UP YOUR<br>GAMING EXPERIENCE</h1>
+    <div class="hero-buttons">
+        <button class="primary" onclick="scrollToGames()">Browse Games</button>
+        <button class="secondary">Explore</button>
+    </div>
+
+    <!-- MAIN IMAGE -->
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=800&q=80">
+</div>
+
+<!-- GAMES -->
+<div class="section" id="games">
+    <h2>Popular Games</h2>
+    <br>
+    <div class="games-grid" id="gameList">
+
+        <!-- GAME CARDS -->
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?gaming">
+            <h3>Cyber Strike</h3>
+            <p class="price">$49.99</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?racing-game">
+            <h3>Speed Legends</h3>
+            <p class="price">$39.99</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?fantasy-game">
+            <h3>Myth Quest</h3>
+            <p class="price">$59.99</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?shooter-game">
+            <h3>WarZone X</h3>
+            <p class="price">$44.99</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?adventure-game">
+            <h3>Lost Realm</h3>
+            <p class="price">$54.99</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?space-game">
+            <h3>Galaxy Force</h3>
+            <p class="price">$49.99</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?zombie-game">
+            <h3>Zombie Night</h3>
+            <p class="price">$29.99</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?sports-game">
+            <h3>Pro Football 25</h3>
+            <p class="price">$59.99</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?rpg-game">
+            <h3>Dragon Age X</h3>
+            <p class="price">$64.99</p>
+        </div>
+
+        <div class="game-card">
+            <img src="https://source.unsplash.com/400x300/?battle-game">
+            <h3>Battle Arena</h3>
+            <p class="price">$34.99</p>
+        </div>
+
+    </div>
+</div>
+
+<footer id="contact">
+    <p>© 2025 V-GameStore | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark");
+}
+
+function scrollToGames() {
+    document.getElementById("games").scrollIntoView({ behavior: "smooth" });
+}
+
+document.getElementById("search").addEventListener("keyup", function () {
+    let value = this.value.toLowerCase();
+    document.querySelectorAll(".game-card").forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(value) ? "block" : "none";
+    });
+});
+</script>
+
+</body>
+</html>
