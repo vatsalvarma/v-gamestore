@@ -1,9 +1,8 @@
 # 🎮 V-GameStore
 ## 🌐 Live Demo 
-visit:
-A modern and responsive gaming store website built using **HTML, CSS, and JavaScript**.
-Features smooth animations, dark mode, live search, and a clean UI inspired by modern gaming platforms.
+visit: https://vatsalvarma.github.io/v-gamestore/
 ---<img width="1905" height="970" alt="Screenshot 2026-01-01 185308" src="https://github.com/user-attachments/assets/466ce273-7ffd-46d3-b339-6ae45a581a11" />
+A modern and responsive gaming store website built using **HTML, CSS, and JavaScript**.Features smooth animations, dark mode, live search, and a clean UI inspired by modern gaming platforms.
 ## 🚀 Features
 
 * 🎮 Hero section with background image & overlay text
