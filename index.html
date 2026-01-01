@@ -63,7 +63,6 @@ body {
     padding: 8px 14px;
     border-radius: 20px;
     border: none;
-    outline: none;
 }
 
 .toggle {
@@ -72,22 +71,29 @@ body {
     border-radius: 20px;
     background: var(--accent);
     color: var(--bg);
-    font-size: 14px;
 }
 
 /* HERO */
 .hero {
     max-width: 1200px;
     margin: 30px auto;
-    background: linear-gradient(120deg, #e3e8eb, #ffffff);
+    height: 420px;
     border-radius: 30px;
-    padding: 60px;
     position: relative;
     overflow: hidden;
+    background: 
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("drop-your-best-cyberpunk-2077-wallpapers-zedge-is-filled-v0-8ovva1muyosc1.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px;
 }
 
-.dark .hero {
-    background: linear-gradient(120deg, #1b1b1b, #0f0f0f);
+.hero-content {
+    color: white;
+    max-width: 500px;
 }
 
 .hero h1 {
@@ -96,12 +102,12 @@ body {
 }
 
 .hero-buttons button {
-    padding: 14px 25px;
+    padding: 14px 26px;
     border-radius: 30px;
     border: none;
+    font-weight: bold;
     margin-right: 10px;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .primary {
@@ -112,13 +118,6 @@ body {
 .secondary {
     background: white;
     color: black;
-}
-
-.hero img {
-    position: absolute;
-    right: 60px;
-    bottom: 0;
-    height: 350px;
 }
 
 /* GAMES */
@@ -137,7 +136,6 @@ body {
     padding: 20px;
     border-radius: 20px;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 .game-card:hover {
@@ -153,14 +151,24 @@ body {
     margin: 10px 0 5px;
 }
 
-.price {
+/* CONTACT */
+#contact {
+    padding: 50px;
+    text-align: center;
+}
+
+#contact a {
+    display: inline-block;
+    margin: 10px;
     font-weight: bold;
+    color: var(--text);
+    text-decoration: none;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     opacity: 0.7;
 }
 </style>
@@ -173,7 +181,6 @@ footer {
     <div class="logo">V-GAMESTORE</div>
     <div class="nav-links">
         <a href="#games">Games</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </div>
     <div class="nav-right">
@@ -186,89 +193,39 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
-    <h1>LEVEL UP YOUR<br>GAMING EXPERIENCE</h1>
-    <div class="hero-buttons">
-        <button class="primary" onclick="scrollToGames()">Browse Games</button>
-        <button class="secondary">Explore</button>
+    <div class="hero-content">
+        <h1>LEVEL UP YOUR<br>GAMING EXPERIENCE</h1>
+        <div class="hero-buttons">
+            <button class="primary" onclick="scrollToGames()">Browse Games</button>
+            <button class="secondary">Explore</button>
+        </div>
     </div>
-
-    <!-- MAIN IMAGE -->
-    <img src="drop-your-best-cyberpunk-2077-wallpapers-zedge-is-filled-v0-8ovva1muyosc1.webp">
 </div>
 
 <!-- GAMES -->
 <div class="section" id="games">
-    <h2>Popular Games</h2>
-    <br>
-    <div class="games-grid" id="gameList">
+    <h2>Popular Games</h2><br>
 
-        <!-- GAME CARDS -->
-        <div class="game-card">
-            <img src="2723.jpg">
-            <h3>Need-For-Speed</h3>
-            <p class="price">$49.99</p>
-        </div>
-
-        <div class="game-card">
-            <img src="best-sleeping-dogs-background-1920-x-1200-scn75obgo7p2mxyf.webp">
-            <h3>Sleeping-Dogs</h3>
-            <p class="price">$39.99</p>
-        </div>
-
-        <div class="game-card">
-            <img src="watch-dogs-wrqv292fcuavzp79.jpg">
-            <h3>Watch-dogs</h3>
-            <p class="price">$59.99</p>
-        </div>
-
-        <div class="game-card">
-            <img src="payback-gridazic7g1bul0u.jpg">
-            <h3>NFS-Payback</h3>
-            <p class="price">$44.99</p>
-        </div>
-
-        <div class="game-card">
-            <img src="wallpapersden.com_assassin-s-creed-3-4k_3840x2160.jpg">
-            <h3>Assins-Creed</h3>
-            <p class="price">$54.99</p>
-        </div>
-
-        <div class="game-card">
-            <img src="HD-wallpaper-call-of-duty-online-game-call-of-duty-games-pc-games-xbox-games-ps-games.jpg">
-            <h3>COD</h3>
-            <p class="price">$49.99</p>
-        </div>
-
-        <div class="game-card">
-            <img src="HD-wallpaper-saints-row-video-game-saints-row-iv-re-elected.jpg
-">
-            <h3>Saints-Row</h3>
-            <p class="price">$29.99</p>
-        </div>
-
-        <div class="game-card">
-            <img src="Cyberpunk-2077-Wallpaper-4K.jpg">
-            <h3>Cyberpunk 25</h3>
-            <p class="price">$59.99</p>
-        </div>
-
-        <div class="game-card">
-            <img src="o3bpjq22dnh41.jpg">
-            <h3>Dragon Age X</h3>
-            <p class="price">$64.99</p>
-        </div>
-
-        <div class="game-card">
-            <img src="HD-wallpaper-video-game-cyberpunk-2077-cyberpunk-futuristic-girl-night-rain-road-sword-warrior-weapon-woman.jpg">
-            <h3>2077</h3>
-            <p class="price">$34.99</p>
-        </div>
-
+    <div class="games-grid">
+        <div class="game-card"><img src="2723.jpg"><h3>Need For Speed</h3></div>
+        <div class="game-card"><img src="best-sleeping-dogs-background-1920-x-1200-scn75obgo7p2mxyf.webp"><h3>Sleeping Dogs</h3></div>
+        <div class="game-card"><img src="watch-dogs-wrqv292fcuavzp79.jpg"><h3>Watch Dogs</h3></div>
+        <div class="game-card"><img src="payback-gridazic7g1bul0u.jpg"><h3>NFS Payback</h3></div>
+        <div class="game-card"><img src="wallpapersden.com_assassin-s-creed-3-4k_3840x2160.jpg"><h3>Assassin’s Creed</h3></div>
+        <div class="game-card"><img src="HD-wallpaper-call-of-duty-online-game-call-of-duty-games-pc-games-xbox-games-ps-games.jpg"><h3>COD</h3></div>
     </div>
 </div>
 
-<footer id="contact">
-    <p>© 2025 V-GameStore | All Rights Reserved</p>
+<!-- CONTACT -->
+<div id="contact">
+    <h2>Contact Me</h2>
+    <a href="https://github.com/vatsalvarma" target="_blank">🐙 GitHub</a>
+    <a href="https://www.linkedin.com/in/vatsal-varma" target="_blank">💼 LinkedIn</a>
+    <a href="mailto:gamesvatsal99@gmail.com">📧 Email</a>
+</div>
+
+<footer>
+    © 2025 V-GameStore | All Rights Reserved
 </footer>
 
 <script>
@@ -279,13 +236,6 @@ function toggleMode() {
 function scrollToGames() {
     document.getElementById("games").scrollIntoView({ behavior: "smooth" });
 }
-
-document.getElementById("search").addEventListener("keyup", function () {
-    let value = this.value.toLowerCase();
-    document.querySelectorAll(".game-card").forEach(card => {
-        card.style.display = card.innerText.toLowerCase().includes(value) ? "block" : "none";
-    });
-});
 </script>
 
 </body>
