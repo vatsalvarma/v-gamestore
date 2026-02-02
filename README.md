@@ -1,10 +1,6 @@
 # 🎮 V-GameStore (Download games for Free)
 visit: https://vatsalvarma.github.io/v-gamestore/
 ---
-<img width="1905" height="970" alt="Screenshot 2026-01-01 185308" src="https://github.com/user-attachments/assets/466ce273-7ffd-46d3-b339-6ae45a581a11" />
-
-
-
 <img width="1905" height="864" alt="Screenshot 2026-01-01 185308" src="https://github.com/user-attachments/assets/36efcd5d-01b6-4cbe-8fa5-1b1cb87fd949" />
 A modern and responsive gaming store website built using **HTML, CSS, and JavaScript**.Features smooth animations, dark mode, live search, and a clean UI inspired by modern gaming platforms.
 ## 🚀 Features
