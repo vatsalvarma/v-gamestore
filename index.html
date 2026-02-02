@@ -396,6 +396,9 @@ body > .games-grid{
   }
 }
 
+html{
+  scroll-behavior:smooth;
+}
 
     
     
@@ -502,6 +505,7 @@ body > .games-grid{
 
 <!-- HERO STYLE GAMES -->
 <div class="hero-game">
+    
   <img src="https://i.pinimg.com/1200x/2d/6b/78/2d6b788444cfbc5b797c9ccf8af1fbb1.jpg" onclick="go('https://fitgirl-repacks.site/cyberpunk-2077/')">
   <div class="info">
     <h2>Cyberpunk 2077</h2>
@@ -538,7 +542,8 @@ body > .games-grid{
 </div>
     
 
-<div class="promo">
+<div class="promo" id="mods">
+
   <div class="promo-content">
     <h1> Game-Verse</h1>
     <p>To mod games, unlock premium experiences and explore next-level gaming.</p>
@@ -592,6 +597,37 @@ body > .games-grid{
 </footer>
 
 <script>
+
+  function toggleMode(){document.body.classList.toggle("dark")}
+  function go(url){window.open(url,"_blank")}
+
+  function scrollToGames(){
+    document.getElementById("hero-games")
+      .scrollIntoView({behavior:"smooth"});
+  }
+
+  function scrollToHeroGames(){
+    document.getElementById("hero-games")
+      .scrollIntoView({behavior:"smooth"});
+  }
+
+  function scrollToMods(){
+    document.getElementById("mods")
+      .scrollIntoView({behavior:"smooth"});
+  }
+
+  function scrollToContact(){
+    document.getElementById("contact")
+      .scrollIntoView({behavior:"smooth"});
+  }
+
+  document.getElementById("search").addEventListener("keyup",function(){
+    let val=this.value.toLowerCase()
+    document.querySelectorAll(".game-card").forEach(card=>{
+      card.style.display=card.innerText.toLowerCase().includes(val)?"block":"none"
+    })
+  })
+   
   function toggleMode(){document.body.classList.toggle("dark")}
   function go(url){window.open(url,"_blank")}
 
