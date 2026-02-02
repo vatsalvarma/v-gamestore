@@ -351,6 +351,27 @@ footer {
   }
 }
 
+    /* EDGE TO EDGE GAME GRID FIX */
+.games-grid{
+  width:100%;
+  padding:40px 60px;   /* consistent edge spacing */
+  margin:0;
+  box-sizing:border-box;
+}
+
+/* REMOVE CENTERING ISSUES */
+body > .games-grid{
+  max-width:100%;
+}
+
+/* MOBILE – TRUE EDGE TO EDGE */
+@media(max-width:768px){
+  .games-grid{
+    padding:20px;
+    gap:16px;
+  }
+}
+
 
     /* FLOATING BACKGROUND EFFECT */
 .promo{
