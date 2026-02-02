@@ -171,6 +171,87 @@ footer {
     padding: 20px;
     opacity: 0.7;
 }
+
+
+/* FULL SCREEN PROMO */
+.promo{
+  height:100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://i.pinimg.com/1200x/ee/0f/24/ee0f242dceee7c181187b155970fea77.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  padding:80px;
+  color:white;
+  overflow:hidden;
+}
+
+.promo-content{
+  max-width:520px;
+  animation:slideIn 1.2s ease forwards;
+}
+
+.promo h1{
+  font-size:64px;
+  font-weight:800;
+  line-height:1.1;
+  animation:glow 2s infinite alternate;
+}
+
+.promo p{
+  margin-top:15px;
+  font-size:20px;
+  opacity:.9;
+  animation:fadeUp 1.4s ease forwards;
+}
+
+.promo button{
+  margin-top:30px;
+  padding:14px 40px;
+  font-size:18px;
+  border-radius:40px;
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.4);
+  color:white;
+  cursor:pointer;
+  backdrop-filter:blur(10px);
+  transition:.4s;
+  animation:pulse 2s infinite;
+}
+
+.promo button:hover{
+  background:white;
+  color:black;
+  transform:scale(1.08);
+}
+
+/* ANIMATIONS */
+@keyframes slideIn{
+  from{transform:translateX(120px);opacity:0}
+  to{transform:translateX(0);opacity:1}
+}
+
+@keyframes fadeUp{
+  from{transform:translateY(30px);opacity:0}
+  to{transform:translateY(0);opacity:1}
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 15px #fff}
+  to{text-shadow:0 0 35px #fff}
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 rgba(255,255,255,.6)}
+  70%{box-shadow:0 0 35px rgba(255,255,255,.6)}
+  100%{box-shadow:0 0 0 rgba(255,255,255,.6)}
+}
+
+    
+    
 </style>
 </head>
 
@@ -267,7 +348,14 @@ footer {
 
 </div>
 
-
+<div class="promo">
+  <div class="promo-content">
+    <h1> Game-Verse</h1>
+    <p>To mod games, unlock premium experiences and explore next-level gaming.</p>
+    <button onclick="go('https://vatsalvarma.github.io/GameVerse-Community/')">Join / Visit</button>
+  </div>
+</div>
+    
 <!-- CONTACT -->
 <div id="contact">
     <h2>Contact Me</h2>
