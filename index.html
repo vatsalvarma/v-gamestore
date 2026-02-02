@@ -262,6 +262,96 @@ footer {
     background:var(--accent);color:var(--bg);cursor:pointer;font-weight:bold
     }
 
+    /* DOUBLE INFO CARDS */
+.info-section{
+  display:flex;
+  min-height:100vh;
+  padding:60px;
+  gap:40px;
+}
+
+.info-card{
+  flex:1;
+  border-radius:30px;
+  padding:60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  animation:cardFloat 10s ease-in-out infinite;
+  transition:.5s;
+}
+
+.info-card h2{
+  font-size:46px;
+  margin-bottom:20px;
+}
+
+.info-card p{
+  font-size:18px;
+  line-height:1.7;
+  opacity:.9;
+}
+
+.info-card button{
+  margin-top:30px;
+  padding:14px 36px;
+  font-size:17px;
+  border-radius:30px;
+  border:none;
+  cursor:pointer;
+  background:rgba(255,255,255,.2);
+  backdrop-filter:blur(10px);
+  transition:.4s;
+}
+
+.info-card button:hover{
+  transform:translateY(-6px) scale(1.05);
+  background:white;
+  color:black;
+}
+
+/* LEFT – GREEN */
+.info-card.green{
+  background:linear-gradient(135deg,#0f9b0f,#38ef7d);
+  color:white;
+  animation-delay:0s;
+}
+
+/* RIGHT – GREY */
+.info-card.grey{
+  background:linear-gradient(135deg,#2c2c2c,#4a4a4a);
+  color:white;
+  animation-delay:2s;
+}
+
+/* FLOATING + SLIDE */
+@keyframes cardFloat{
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-16px)}
+  100%{transform:translateY(0)}
+}
+
+/* ENTRY ANIMATION */
+.info-card{
+  opacity:0;
+  transform:translateY(40px);
+  animation:
+    fadeSlide 1.2s ease forwards,
+    cardFloat 10s ease-in-out infinite;
+}
+
+@keyframes fadeSlide{
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .info-section{
+    flex-direction:column;
+  }
+}
+
+
     /* FLOATING BACKGROUND EFFECT */
 .promo{
   animation:bgFloat 14s ease-in-out infinite;
