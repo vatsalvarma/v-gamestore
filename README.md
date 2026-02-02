@@ -11,7 +11,16 @@ A modern and responsive gaming store website built using **HTML, CSS, and JavaSc
 * 🎞 Smooth scroll animations
 * 📱 Fully responsive design
 * 🕹️ Clean game cards layout
+  
+---
 
+<img width="1898" height="869" alt="Screenshot 2026-02-02 171642" src="https://github.com/user-attachments/assets/02be1eb1-2641-4379-bed3-8aa017cfde5a" />
+
+---
+
+<img width="1898" height="872" alt="Screenshot 2026-02-02 171708" src="https://github.com/user-attachments/assets/6d5ef958-20fa-4b2a-be74-a8d023d46c3f" />
+
+---
 ## 🛠️ Technologies Used
 
 * HTML5
